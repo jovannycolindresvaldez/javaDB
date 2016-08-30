@@ -46,6 +46,7 @@ public class conexionMain {
 
             st.executeUpdate();
             st.close();
+            
         } catch (Exception e) {
         } finally {
             if (conexion != null) {
@@ -85,6 +86,7 @@ public class conexionMain {
                 user.setPwd(rs.getString("password"));
                 lista.add(user);
             }
+            rs.close();
             st.close();
         } catch (Exception e) {
         } finally {
